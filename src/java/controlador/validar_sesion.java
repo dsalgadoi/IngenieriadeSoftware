@@ -29,7 +29,7 @@ public class validar_sesion extends HttpServlet {
     String URL = "jdbc:mysql://localhost:3306/iekadb";
     String usuario = "root";
     String contrasena = "";
-    int hora, estado;
+    int hora, estado, rol;
     String nombre = "";
     String apellido = "";
     
@@ -60,21 +60,29 @@ public class validar_sesion extends HttpServlet {
             
                 existeUsuario = true;
                
-               nombre = rs.getString("nombre");
+               nombre = rs.getString("nombre")+ rs.getString("apellido");
                apellido = rs.getString("apellido");
+               estado = rs.getInt("estado");
+               rol = rs.getInt("id_rol");
             }
             hora =calendario.get(Calendar.HOUR_OF_DAY);
             if(existeUsuario){
-                if (hora <14 || hora >22){
+                if (estado == 0){
+                    request.getSession().setAttribute("nombre", null);
+                    response.sendRedirect("inicio_sesion.jsp?msg= El usuario "+nombre+" Se encuentra inactivo");
+                }else if (rol == 1){
+                    request.getSession().setAttribute("nombre", nombre);
+                    response.sendRedirect("Administrador/home_administrador.jsp");
+                }else if (hora <8 || hora >22){
+                    request.getSession().setAttribute("nombre", null);
                     response.sendRedirect("inicio_sesion.jsp?msg= El sistema solo estara Disponible entre las 8:00 y las 22:00");
-                }else
-                response.sendRedirect("Administrador/home_administrador.jsp");
-                 
+                }else {
+                    request.getSession().setAttribute("nombre", nombre);
+                    response.sendRedirect("Empleado/home_Empleado.jsp");
+                }
             }else{
-                out.println("Nombre de usuario o Contraseña Errada");
-                response.sendRedirect("inicio_sesion.jsp?msg=Usuario y/o clave incorrectos "+hora);
-               
-                
+                request.getSession().setAttribute("nombre", null);
+                response.sendRedirect("inicio_sesion.jsp?msg=Usuario y/o clave incorrectos "+hora);  
             }
             
         }
