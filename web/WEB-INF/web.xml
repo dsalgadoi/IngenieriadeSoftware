@@ -4,9 +4,33 @@
         <servlet-name>validar_sesion</servlet-name>
         <servlet-class>controlador.validar_sesion</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>carga_archivo_tipoActividades</servlet-name>
+        <servlet-class>controlador.carga_archivo_tipoActividades</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>generar_archivo_exportar</servlet-name>
+        <servlet-class>controlador.generar_archivo_exportar</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>registrar_actividad</servlet-name>
+        <servlet-class>controlador.registrar_actividad</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>validar_sesion</servlet-name>
         <url-pattern>/validar_sesion</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>carga_archivo_tipoActividades</servlet-name>
+        <url-pattern>/carga_archivo_tipoActividades</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>generar_archivo_exportar</servlet-name>
+        <url-pattern>/generar_archivo_exportar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>registrar_actividad</servlet-name>
+        <url-pattern>/registrar_actividad</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

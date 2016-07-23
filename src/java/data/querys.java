@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package modelo;
+package data;
 
+import data.database;
 import java.sql.*;
 import javax.swing.table.DefaultTableModel;
 
@@ -42,6 +43,18 @@ public class querys extends database{
     *
     */
     public boolean ejecutarSQL(String sql) throws ClassNotFoundException
+    {
+       try {
+          Statement sentencia = querys.getConexion().createStatement();
+          sentencia.executeUpdate(sql);
+       } catch (SQLException ex) {
+          ex.printStackTrace();
+       return false;
+       }
+
+       return true;
+    }
+    public boolean cargar_Actividad(String sql) throws ClassNotFoundException
     {
        try {
           Statement sentencia = querys.getConexion().createStatement();
