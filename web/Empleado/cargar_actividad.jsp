@@ -22,13 +22,13 @@
   <div class="form-group">
     <label class="control-label col-sm-2" type="text">Actividad</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="actividad" placeholder="]Ingrese la actividad realizada">
+      <input type="text" class="form-control" name="actividad" placeholder="]Ingrese la actividad realizada">
     </div>
   </div>
   <div class="form-group">
     <label class="control-label col-sm-2" for="pwd">Cantidad Horas</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="horas" placeholder="Ingrese la cantidad de horas">
+      <input type="text" class="form-control" name="horas" placeholder="Ingrese la cantidad de horas">
     </div>
   </div>
   <div class="form-group">

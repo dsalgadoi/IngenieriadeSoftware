@@ -7,6 +7,7 @@ package data;
 
 import data.database;
 import java.sql.*;
+import static java.sql.DriverManager.println;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -54,13 +55,15 @@ public class querys extends database{
 
        return true;
     }
-    public boolean cargar_Actividad(String sql) throws ClassNotFoundException
+    public static boolean cargar_Actividad(String hora, String actividad ) throws ClassNotFoundException
     {
        try {
+          String sql ="INSERT INTO iekabd.actividad_usuario(descripcion_actividad,horas_laboradas,id_actividad,id_usuario,id_cargo)VALUES('"+actividad+"','"+hora+"','1','2','1');";
           Statement sentencia = querys.getConexion().createStatement();
           sentencia.executeUpdate(sql);
        } catch (SQLException ex) {
           ex.printStackTrace();
+          
        return false;
        }
 

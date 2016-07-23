@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import data.querys;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 /**
  *
  * @author dsalgado
@@ -35,18 +37,22 @@ public class registrar_actividad extends HttpServlet {
         String horas = request.getParameter("horas");
         try (PrintWriter out = response.getWriter()) {
             
-            
-            
-            /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Actividad Registrada</title>");            
+            out.println("<title>Actividad Registrada</title>");
             out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Actividad Registrada</h1>");
-            out.println("</body>");
+            if(querys.cargar_Actividad(actividad,horas)){
+                out.println("<h1>Actividad Registrada</h1>");
+            }else{
+                out.println("<h1>Actividad no Registrada</h1>");
+                String sql ="INSERT INTO iekabd.actividad_usuario(descripcion_actividad,horas_laboradas,id_actividad,id_usuario,id_cargo)VALUES('"+actividad+"','"+horas+"','1','2','1');";
+                out.println(sql);
+            }
+             out.println("</body>");
             out.println("</html>");
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(registrar_actividad.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
