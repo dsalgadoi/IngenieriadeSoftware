@@ -29,8 +29,8 @@
                     <div class="row">
                         <div class="col-xs-6 col-md-6">
                           <a href="cargar_actividad.jsp" class="btn btn-primary  btn-lg btn-lg btn-block" role="button"><span class="glyphicon glyphicon-list-alt" ></span> <br/>Registrar Actividad<br></a>
-                          <a href="#" class="btn btn-primary  btn-lg btn-lg btn-block" role="button"><span class="glyphicon glyphicon-bookmark"></span> <br/>Modificar Actividad</a>
-                          <a href="#" class="btn btn-primary btn-lg btn-lg btn-block"  role="button"><span class="glyphicon glyphicon-signal"></span> <br/>Modificar Contraseña</a>
+                          <a href="#" class="btn btn-primary  btn-lg btn-lg btn-block" role="button" disabled="disabled"><span class="glyphicon glyphicon-bookmark"></span> <br/>Modificar Actividad</a>
+                          <a href="#" class="btn btn-primary btn-lg btn-lg btn-block"  role="button" disabled="disabled"><span class="glyphicon glyphicon-signal"></span> <br/>Modificar Contraseña</a>
                           
                         </div>
                         <div class="col-xs-6 col-md-6">

@@ -28,18 +28,18 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-xs-6 col-md-6">
-                          <a href="carga_trh.jsp" class="btn btn-primary  btn-lg btn-lg btn-block" role="button"><span class="glyphicon glyphicon-list-alt" ></span> <br/>Carga Tabla con relacion horas y costo<br></a>
-                          <a href="carga_empleados.jsp" class="btn btn-primary  btn-lg btn-lg btn-block" role="button"><span class="glyphicon glyphicon-bookmark"></span> <br/>Carga de empleados</a>
-                          <a href="cargar_tipoActividades.jsp" class="btn btn-primary btn-lg btn-lg btn-block"  role="button"><span class="glyphicon glyphicon-signal"></span> <br/>Cargar Tipo de Actividades</a>
+                          <a href="carga_trh.jsp" class="btn btn-primary  btn-lg btn-lg btn-block" role="button" disabled="disabled"><span class="glyphicon glyphicon-list-alt" ></span> <br/>Carga Tabla con relacion horas y costo<br></a>
+                          <a href="carga_empleados.jsp" class="btn btn-primary  btn-lg btn-lg btn-block" role="button" disabled="disabled"><span class="glyphicon glyphicon-bookmark"></span> <br/>Carga de empleados</a>
+                          <a href="cargar_tipoActividades.jsp" class="btn btn-primary btn-lg btn-lg btn-block"  role="button" disabled="disabled"><span class="glyphicon glyphicon-signal"></span> <br/>Cargar Tipo de Actividades</a>
                           
                         </div>
                         <div class="col-xs-6 col-md-6">
-                          <a href="#" class="btn btn-warning btn-lg btn-lg btn-block" role="button"><span class="glyphicon glyphicon-file"></span> <br/>Consultar Tabla con relacion horas y costo</a>
-                          <a href="#" class="btn btn-warning  btn-lg btn-lg btn-block" role="button"><span class="glyphicon glyphicon-bookmark"></span> <br/>Gestionar Empleados</a>
-                          <a href="#" class="btn btn-warning btn-lg btn-lg btn-block"  role="button"><span class="glyphicon glyphicon-signal"></span> <br/>Gestionar Tipo de Actividades</a>
+                          <a href="#" class="btn btn-warning btn-lg btn-lg btn-block" role="button" disabled="disabled"><span class="glyphicon glyphicon-file " ></span> <br/>Consultar Tabla con relacion horas y costo</a>
+                          <a href="#" class="btn btn-warning  btn-lg btn-lg btn-block" role="button"disabled="disabled"><span class="glyphicon glyphicon-bookmark"></span> <br/>Gestionar Empleados</a>
+                          <a href="#" class="btn btn-warning btn-lg btn-lg btn-block"  role="button"disabled="disabled"><span class="glyphicon glyphicon-signal"></span> <br/>Gestionar Tipo de Actividades</a>
                         </div>
                     </div>
-                    <a href="http://www.jquery2dotnet.com/" class="btn btn-success btn-lg btn-block" role="button"><span class="glyphicon glyphicon-globe"></span>Consultar Reporte de Actividades</a>
+                    <a href="reporte_actividades.jsp" class="btn btn-success btn-lg btn-block" role="button"><span class="glyphicon glyphicon-globe"></span>Consultar Reporte de Actividades</a>
                 </div>
             </div>
         </div>

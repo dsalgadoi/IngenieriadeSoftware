@@ -76,7 +76,7 @@ public class validar_sesion extends HttpServlet {
                 }else if (rol == 1){
                     request.getSession().setAttribute("nombre", nombre);
                     response.sendRedirect("Administrador/home_administrador.jsp");
-                }else if (hora <8 || hora >22){
+                }else if (hora <8 || hora >24){
                     request.getSession().setAttribute("nombre", null);
                     response.sendRedirect("inicio_sesion.jsp?msg= El sistema solo estara Disponible entre las 8:00 y las 22:00");
                 }else {

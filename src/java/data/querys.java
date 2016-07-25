@@ -55,10 +55,10 @@ public class querys extends database{
 
        return true;
     }
-    public static boolean cargar_Actividad(String hora, String actividad ) throws ClassNotFoundException
+    public static boolean cargar_Actividad(String actividad, String horas) throws ClassNotFoundException
     {
        try {
-          String sql ="INSERT INTO iekabd.actividad_usuario(descripcion_actividad,horas_laboradas,id_actividad,id_usuario,id_cargo)VALUES('"+actividad+"','"+hora+"','1','2','1');";
+          String sql ="INSERT INTO iekabd.actividad_usuario(descripcion_actividad,horas_laboradas,id_actividad,id_usuario,id_cargo)VALUES('"+actividad+"','"+horas+"','1','2','1');";
           Statement sentencia = querys.getConexion().createStatement();
           sentencia.executeUpdate(sql);
        } catch (SQLException ex) {
